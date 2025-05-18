@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <OutputType>Library</OutputType>
+        <RootNamespace>Necrofancy.Repo.ScaleOverchargeToUpgrades</RootNamespace>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+    </PropertyGroup>
+
+    <!-- Define STEAMPATH and BEPINEXPATH path to environment before launching solution -->
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>$(STEAMPATH)\steamapps\common\REPO\REPO_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>$(STEAMPATH)\steamapps\common\REPO\REPO_Data\Managed\UnityEngine.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>$(STEAMPATH)\steamapps\common\REPO\REPO_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      <Reference Include="BepInEx">
+        <HintPath>$(BEPINEXPATH)\BepInEx.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+      <Reference Include="Harmony">
+        <HintPath>$(BEPINEXPATH)\0Harmony.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+    </ItemGroup>
+</Project>
